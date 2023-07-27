@@ -1,3 +1,4 @@
+#!/usr/bin/end node
 import _ from 'lodash';
 
 const indent = (depth, spaceCount = 4) => ' '.repeat(depth * spaceCount - 4);
@@ -7,6 +8,7 @@ const stringify = (data, depth, mapping) => {
     return String(data);
   }
 
+  // eslint-disable-next-line max-len
   const output = Object.entries(data).map(([key, value]) => mapping.unchanged({ key, value }, depth + 1));
 
   return `{\n${output.join('\n')}\n${indent(depth)}  }`;
@@ -21,9 +23,9 @@ const mapping = {
     const output = children.flatMap((node) => mapping[node.type](node, depth + 1, iter));
     return `${indent(depth)}  ${key}: {\n${output.join('\n')}\n${indent(depth)}  }`;
   },
-  added: (node, depth) => `${indent(depth)}+ ${node.key}: ${stringify(node.value, depth, mapping)  }`,
-  deleted: (node, depth) => `${indent(depth)}- ${node.key}: ${stringify(node.value, depth, mapping)  }`,
-  unchanged: (node, depth) => `${indent(depth)}  ${node.key}: ${stringify(node.value, depth, mapping) }`,
+  added: (node, depth) => `${indent(depth)}+ ${node.key}: ${stringify(node.value, depth, mapping)}`,
+  deleted: (node, depth) => `${indent(depth)}- ${node.key}: ${stringify(node.value, depth, mapping)}`,
+  unchanged: (node, depth) => `${indent(depth)}  ${node.key}: ${stringify(node.value, depth, mapping)}`,
   changed: (node, depth) => {
     const { key, value1, value2 } = node;
 

@@ -42,6 +42,6 @@ const stylish = `{
       fee: 100500
   }
 }
-`
+`;
 
 export default stylish;

@@ -1,3 +1,4 @@
+#!/usr/bin/end node
 import _ from 'lodash';
 
 const buildDiff = (data1, data2) => {

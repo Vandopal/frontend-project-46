@@ -1,3 +1,4 @@
+#!/usr/bin/end node
 import yaml from 'js-yaml';
 
 const parsers = {
