@@ -1,16 +1,20 @@
 import fs from 'fs';
 import path from 'path';
 import _ from 'lodash';
-import buildDiff from './treeBuilder.js';
-import parsers from './parser.js';
+import parse from './parse.js'
+import buildTree from './treeBuilder.js';
+import format from './formatters/index.js';
 
-const absolutePath = (filepath) => path.resolve(process.cwd(), filepath);
-const readFile = (filepath) => fs.readFileSync(filepath, "utf-8");
-const extname = (filepath) => path.extname(filepath).slice(1);
-const parseObject = (filepath) => parsers(readFile(filepath), extname(filepath));
+const buildFullPath = (filepath) => path.resolve(process.cwd(), filepath);
+const extractFormat = (filepath) => path.extname(filepath).slice(1);
+const getData = (filepath) => parse(fs.readFileSync(filepath, 'utf-8'), extractFormat(filepath));
 
-function genDiff(path1, path2) {
 
-return parseObject(path1)
+function genDiff(path1, path2, formatName = 'stylish') {
+  const data1 = getData(buildFullPath(path1));
+  const data2 = getData(buildFullPath(path2));
+
+  const tree = buildTree(data1, data2);
+  return format(tree, formatName);
 }
 export default genDiff; 
