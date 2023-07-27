@@ -8,7 +8,6 @@ const stringify = (data, depth, mapping) => {
     return String(data);
   }
 
-  // eslint-disable-next-line max-len
   const output = Object.entries(data).map(([key, value]) => mapping.unchanged({ key, value }, depth + 1));
 
   return `{\n${output.join('\n')}\n${indent(depth)}  }`;
