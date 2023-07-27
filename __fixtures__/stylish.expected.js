@@ -1,4 +1,4 @@
-{
+const stylish = `{
   common: {
     + follow: false
       setting1: Value 1
@@ -42,3 +42,6 @@
       fee: 100500
   }
 }
+`;
+
+export default stylish;
