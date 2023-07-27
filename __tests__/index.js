@@ -1,3 +1,5 @@
+import { beforeEach, test, expect } from '@jest/globals';
+
 import { execFileSync } from 'child_process';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
@@ -12,7 +14,6 @@ let node1;
 let node2;
 let node3;
 
-// eslint-disable-next-line no-undef
 beforeEach(() => {
   const options = { encoding: 'utf8', cwd: path.join(dirname, '..') };
 
@@ -36,20 +37,14 @@ beforeEach(() => {
   node3 = result3;
 });
 
-// eslint-disable-next-line no-undef
 test('json', () => {
-  // eslint-disable-next-line no-undef
   expect(node1).toEqual(json);
 });
 
-// eslint-disable-next-line no-undef
 test('stylish', () => {
-  // eslint-disable-next-line no-undef
   expect(node2).toEqual(stylish);
 });
 
-// eslint-disable-next-line no-undef
 test('plain', () => {
-  // eslint-disable-next-line no-undef
   expect(node3).toEqual(plain);
 });

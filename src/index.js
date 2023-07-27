@@ -1,7 +1,6 @@
 #!/usr/bin/end node
 import fs from 'fs';
 import path from 'path';
-// eslint-disable-next-line no-unused-vars
 import _ from 'lodash';
 import parse from './parse.js';
 import buildTree from './treeBuilder.js';
