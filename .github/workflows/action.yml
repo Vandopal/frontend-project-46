@@ -31,4 +31,4 @@ inputs:
     default: 'true'
 runs:
   using: 'node16'
-  main: 'README.md'
+  main: '__tests__/index.js'
