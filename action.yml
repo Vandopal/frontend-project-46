@@ -1,0 +1,34 @@
+name: 'Code Climate Coverage Action'
+description: 'Publish code coverage to Code Climate'
+author: 'Vandopal'
+branding:
+  icon: 'code'
+  color: 'dark'
+inputs:
+  coverageCommand:
+    required: false
+    description: ''
+    default: ''
+  workingDirectory:
+    required: false
+    description: ''
+    default: ''
+  debug:
+    required: false
+    description: ''
+    default: 'false'
+  coverageLocations:
+    required: false
+    description: ''
+    default: ''
+  prefix:
+    required: false
+    description: ''
+    default: ''
+  verifyDownload:
+    required: false
+    description: 'Verify the downloaded reporter''s checksum and GPG signature'
+    default: 'true'
+runs:
+  using: 'node16'
+  main: 'lib/main.js'
