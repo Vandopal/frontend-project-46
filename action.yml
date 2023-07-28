@@ -1,0 +1,26 @@
+name: My Custom Action
+description: A custom GitHub Action that runs a Node.js script
+
+runs:
+  using: 'node16'
+  main: 'bin/gendiff.js'
+
+inputs:
+  filepath1:
+    description: 'Path to the first JSON file'
+    required: true
+    default: '__fixtures__/filepath1.json'
+
+  filepath2:
+    description: 'Path to the second JSON file'
+    required: true
+    default: '__fixtures__/filepath2.json'
+
+  format:
+    description: 'Output format'
+    required: false
+    default: 'json'
+
+outputs:
+  output:
+    description: 'The generated output'
