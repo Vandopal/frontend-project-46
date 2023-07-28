@@ -16,7 +16,7 @@ const mapping = {
   unchanged: () => '',
   changed: (node, iter, path) => {
     const { key, value1, value2 } = node;
-    const data1 = `'${[...path, key].join('.')}' was updated. From ${value1 === null ? '[complex value]' : typeof value1 === 'object' ? '[complex value]' : typeof value1 === 'string' ? `'${value1}'` : value1} to ${typeof value2 === 'object' ? '[complex value]' : typeof value2 === 'string' ? `'${value2}'` : value2}`;
+    const data1 = `'${[...path, key].join('.')}' was updated. From ${value1 === null ? null : typeof value1 === 'object' ? '[complex value]' : typeof value1 === 'string' ? `'${value1}'` : value1} to ${value2 === null ? null : typeof value2 === 'object' ? '[complex value]' : typeof value2 === 'string' ? `'${value2}'` : value2}`;
     return data1;
   },
 };
