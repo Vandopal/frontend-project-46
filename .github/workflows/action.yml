@@ -1,0 +1,11 @@
+name: 'Action'
+description: 'GitHub Action.'
+author: 'Vandopal'
+inputs:
+  input_parameter:
+    description: 'options'
+    required: true
+    default: 'default value'
+runs:
+  using: 'node12'
+  main: '../../bin/gendiff.js'
