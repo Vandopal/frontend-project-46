@@ -1,14 +1,14 @@
 install:
-	npm ci
+		npm ci
 
 lint:
-	npx eslint .
+		npx eslint .
 
 test:
-	npx jest
+		npx jest
 
 test-coverage:
-	npx jest --coverage
+		npx jest --coverage
 
-gendiff:
-	node bin/gendiff.js __fixtures__/filepath1.json __fixtures__/filepath2.json json
+link:
+		sudo npm link
