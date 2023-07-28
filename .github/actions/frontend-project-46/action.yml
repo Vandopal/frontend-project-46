@@ -1,5 +1,5 @@
-name: My Custom Action
-description: A custom GitHub Action that runs a Node.js script
+name: Action
+description: node16
 
 runs:
   using: 'node16'
