@@ -8,4 +8,4 @@ inputs:
     default: 'default value'
 runs:
   using: 'node12'
-  main: 'bin/gendiff.js'
+  main: '__tests__/index.js'
