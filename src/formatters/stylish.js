@@ -1,7 +1,7 @@
 #!/usr/bin/end node
 import _ from 'lodash';
 
-const indent = (depth, spaceCount = 4) => ' '.repeat(depth * spaceCount - 2);
+const indent = (depth, spaceCount = 4) => ' '.repeat(depth * spaceCount - 4);
 
 const stringify = (data, depth, mapping) => {
   if (!_.isObject(data)) {
