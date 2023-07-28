@@ -4,7 +4,7 @@ import _ from 'lodash';
 const mapping = {
   root: ({ children }, iter, path) => {
     const output = children.flatMap((node) => mapping[node.type](node, iter, [...path]));
-    const out = `${output}`.split(',').map((val) => `${val.lemgth === 0 ? val : `Property ${val}`}`);
+    const out = `${output}`.split(',').map((val) => `${val.length === 0 ? val : `Property ${val}`}`);
     return out;
   },
   nested: ({ key, children }, iter, path) => {
