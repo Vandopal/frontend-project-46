@@ -11,4 +11,4 @@ test-coverage:
 	npx jest --coverage
 
 gendiff:
-	node bin/gendiff.js __fixtures__/filepath1.json __fixtures__/filepath2.json json
+	node bin/gendiff.js --format stylish __fixtures__/file1.json __fixtures__/file2.json

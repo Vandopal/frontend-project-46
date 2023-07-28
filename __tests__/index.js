@@ -45,22 +45,22 @@ beforeEach(() => {
   );
   const result5 = execFileSync(
     'node',
-    ['bin/gendiff.js', '__fixtures__/file1.yaml', '__fixtures__/file2.yaml'],
+    ['bin/gendiff.js', '__fixtures__/file1.yml', '__fixtures__/file2.yml'],
     options,
   );
   const result6 = execFileSync(
     'node',
-    ['bin/gendiff.js', '--format', 'json', '__fixtures__/file1.yaml', '__fixtures__/file2.yaml'],
+    ['bin/gendiff.js', '--format', 'json', '__fixtures__/file1.yml', '__fixtures__/file2.yml'],
     options,
   );
   const result7 = execFileSync(
     'node',
-    ['bin/gendiff.js', '--format', 'stylish', '__fixtures__/file1.yaml', '__fixtures__/file2.yaml'],
+    ['bin/gendiff.js', '--format', 'stylish', '__fixtures__/file1.yml', '__fixtures__/file2.yml'],
     options,
   );
   const result8 = execFileSync(
     'node',
-    ['bin/gendiff.js', '--format', 'plain', '__fixtures__/file1.yaml', '__fixtures__/file2.yaml'],
+    ['bin/gendiff.js', '--format', 'plain', '__fixtures__/file1.yml', '__fixtures__/file2.yml'],
     options,
   );
   node1 = result1;
