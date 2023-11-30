@@ -26,11 +26,11 @@ export function makePlainDiff(tree) {
       case 'added': {
         return `Property '${currentPath}' was added with value: ${getFormattedValue(child.value)}`;
       }
-      case 'removed': {
+      case 'deleted': {
         return `Property '${currentPath}' was removed`;
       }
       case 'changed': {
-        return `Property '${currentPath}' was updated. From ${getFormattedValue(child.oldValue)} to ${getFormattedValue(child.newValue)}`;
+        return `Property '${currentPath}' was updated. From ${getFormattedValue(child.value1)} to ${getFormattedValue(child.value2)}`;
       }
       case 'unchanged': {
         return null;
