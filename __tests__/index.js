@@ -10,14 +10,7 @@ import stylish from '../__fixtures__/stylish.expected.js';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-let node1;
-let node2;
-let node3;
-let node4;
-let node5;
-let node6;
-let node7;
-let node8;
+let node;
 
 beforeEach(() => {
   const options = { encoding: 'utf8', cwd: path.join(__dirname, '..') };
@@ -63,44 +56,37 @@ beforeEach(() => {
     ['bin/gendiff.js', '--format', 'plain', '__fixtures__/file1.yml', '__fixtures__/file2.yml'],
     options,
   );
-  node1 = result1;
-  node2 = result2;
-  node3 = result3;
-  node4 = result4;
-  node5 = result5;
-  node6 = result6;
-  node7 = result7;
-  node8 = result8;
+  node = [result1, result2, result3, result4, result5, result6, result7, result8];
 });
 
 test('stylish', () => {
-  expect(node1).toEqual(stylish);
+  expect(node[0]).toEqual(stylish);
 });
 
 test('json', () => {
-  expect(node2).toEqual(json);
+  expect(node[1]).toEqual(json);
 });
 
 test('stylish', () => {
-  expect(node3).toEqual(stylish);
+  expect(node[2]).toEqual(stylish);
 });
 
 test('plain', () => {
-  expect(node4).toEqual(plain);
+  expect(node[3]).toEqual(plain);
 });
 
 test('stylish', () => {
-  expect(node5).toEqual(stylish);
+  expect(node[4]).toEqual(stylish);
 });
 
 test('json', () => {
-  expect(node6).toEqual(json);
+  expect(node[5]).toEqual(json);
 });
 
 test('stylish', () => {
-  expect(node7).toEqual(stylish);
+  expect(node[6]).toEqual(stylish);
 });
 
 test('plain', () => {
-  expect(node8).toEqual(plain);
+  expect(node[7]).toEqual(plain);
 });
