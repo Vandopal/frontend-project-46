@@ -22,7 +22,7 @@
   "homepage": "https://github.com/Vandopal/frontend-project-46#readme",
   "dependencies": {
     "@jest/globals": "^29.6.2",
-    "commander": "^9.4.1",
+    "commander": "^9.5.0",
     "js-yaml": "^4.1.0",
     "lodash": "^4.17.21"
   },

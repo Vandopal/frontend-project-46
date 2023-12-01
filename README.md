@@ -11,14 +11,18 @@
 - npm ci
 - make install
 
-вызов панели помощи: 
-gendiff -h
+Вызов панели помощи: 
+-node bin/gendiff -h
+-make gendiff
 
-запуск проверки на отличия файлов json, yml:
-node bin/gendiff.js __fixtures__/file1.json __fixtures__/file2.json
-node bin/gendiff.js __fixtures__/file1.yml __fixtures__/file2.yml
-node bin/gendiff.js __fixtures__/file1.json __fixtures__/file2.json
-node bin/gendiff.js -f plain __fixtures__/file1.json __fixtures__/file2.json
-node bin/gendiff.js -f stylish __fixtures__/file1.json __fixtures__/file2.json
-node bin/gendiff.js -f json __fixtures__/file1.json __fixtures__/file2.json
+Запуск проверки на отличия файлов json, yml:
+-node bin/gendiff.js --f stylish __fixtures__/file1.json __fixtures__/file2.json
+-node bin/gendiff.js --format json __fixtures__/file1.json __fixtures__/file2.yml
+-node bin/gendiff.js --format plain __fixtures__/file1.yml __fixtures__/file2.yml
+-make plain
+-make json
+-make stylish
+
+Примеры запуска:
 ```
+[![asciicast](https://asciinema.org/a/596121.svg)](https://asciinema.org/a/kDxYRUo4MzfQLPOQ5runtZ5Z1)
