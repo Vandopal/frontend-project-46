@@ -12,16 +12,16 @@
 - make install
 
 Вызов панели помощи: 
--node bin/gendiff -h
--make gendiff
+- node bin/gendiff -h
+- make gendiff
 
 Запуск проверки на отличия файлов json, yml:
--node bin/gendiff.js --f stylish __fixtures__/file1.json __fixtures__/file2.json
--node bin/gendiff.js --format json __fixtures__/file1.json __fixtures__/file2.yml
--node bin/gendiff.js --format plain __fixtures__/file1.yml __fixtures__/file2.yml
--make plain
--make json
--make stylish
+- node bin/gendiff.js --format stylish __fixtures__/file1.yml __fixtures__/file2.yml
+- node bin/gendiff.js --format json __fixtures__/file1.json __fixtures__/file2.json
+- node bin/gendiff.js --format plain __fixtures__/file1.yml __fixtures__/file2.json
+- make plain
+- make json
+- make stylish
 
 Примеры запуска:
 ```
